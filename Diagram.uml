@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>com.unipi.msc.model.Laptop</OriginalElement>
+  <nodes>
+    <node x="-107.0" y="179.0">com.unipi.msc.model.Laptop</node>
+    <node x="-201.96272630457918" y="663.0">com.unipi.msc.constants.ComputerSpecs</node>
+    <node x="185.50000000000006" y="705.0">com.unipi.msc.model.Store</node>
+    <node x="327.62500000000006" y="520.0">com.unipi.msc.factory.DesktopFactory</node>
+    <node x="-18.374999999999943" y="520.0">com.unipi.msc.factory.LaptopFactory</node>
+    <node x="514.0990415335464" y="786.2896698615549">com.unipi.msc.factory.ComputerFactory</node>
+    <node x="621.75" y="464.0">com.unipi.msc.model.Customer</node>
+    <node x="215.05000000000007" y="-15.0">com.unipi.msc.factory.Computer</node>
+    <node x="201.00000000000006" y="358.0">com.unipi.msc.interfaces.ComputerAbstractFactory</node>
+    <node x="695.5" y="246.0">com.unipi.msc.interfaces.ComputerListener</node>
+    <node x="678.0453007537781" y="28.0">com.unipi.msc.Main</node>
+    <node x="437.0" y="179.0">com.unipi.msc.model.Desktop</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="com.unipi.msc.model.Store" target="com.unipi.msc.interfaces.ComputerListener" relationship="TO_MANY">
+      <point x="61.750000000000014" y="-94.5" />
+      <point x="370.75000000000006" y="768.0" />
+      <point x="885.25" y="768.0" />
+      <point x="63.25" y="49.5" />
+    </edge>
+    <edge source="com.unipi.msc.model.Desktop" target="com.unipi.msc.factory.Computer" relationship="GENERALIZATION">
+      <point x="0.0" y="-116.5" />
+      <point x="546.5" y="154.0" />
+      <point x="297.55000000000007" y="154.0" />
+      <point x="0.0" y="72.0" />
+    </edge>
+    <edge source="com.unipi.msc.model.Customer" target="com.unipi.msc.interfaces.ComputerListener" relationship="REALIZATION">
+      <point x="0.0" y="-94.5" />
+      <point x="748.25" y="438.0" />
+      <point x="748.6783812566562" y="438.0" />
+      <point x="-73.32161874334383" y="51.60010649627259" />
+    </edge>
+    <edge source="com.unipi.msc.model.Store" target="com.unipi.msc.model.Customer" relationship="CREATE">
+      <point x="8.496272630458009" y="-94.36474973375937" />
+      <point x="317.49627263045807" y="675.5" />
+      <point x="456.125" y="675.5" />
+      <point x="456.125" y="674.0" />
+      <point x="748.25" y="674.0" />
+      <point x="0.0" y="94.5" />
+    </edge>
+    <edge source="com.unipi.msc.factory.DesktopFactory" target="com.unipi.msc.interfaces.ComputerAbstractFactory" relationship="REALIZATION">
+      <point x="-64.24999999999997" y="-38.5" />
+      <point x="391.8750000000001" y="466.0" />
+      <point x="309.00000000000006" y="466.0" />
+      <point x="0.0" y="27.0" />
+    </edge>
+    <edge source="com.unipi.msc.factory.LaptopFactory" target="com.unipi.msc.interfaces.ComputerAbstractFactory" relationship="REALIZATION">
+      <point x="81.5" y="-38.5" />
+      <point x="226.12500000000006" y="466.0" />
+      <point x="309.00000000000006" y="466.0" />
+      <point x="0.0" y="27.0" />
+    </edge>
+    <edge source="com.unipi.msc.model.Store" target="com.unipi.msc.factory.LaptopFactory" relationship="CREATE">
+      <point x="8.496272630458009" y="-95.64802981895639" />
+      <point x="317.49627263045807" y="675.5" />
+      <point x="144.62500000000006" y="675.5" />
+      <point x="0.0" y="38.5" />
+    </edge>
+    <edge source="com.unipi.msc.model.Store" target="com.unipi.msc.factory.DesktopFactory" relationship="CREATE">
+      <point x="8.496272630458009" y="-94.36474973375937" />
+      <point x="317.49627263045807" y="675.5" />
+      <point x="448.7249733759318" y="675.5" />
+      <point x="448.7249733759318" y="636.25" />
+      <point x="449.67412140575084" y="636.25" />
+      <point x="-6.450878594249218" y="36.273162939297094" />
+    </edge>
+    <edge source="com.unipi.msc.model.Laptop" target="com.unipi.msc.factory.Computer" relationship="GENERALIZATION">
+      <point x="1.4210854715202004E-14" y="-116.5" />
+      <point x="37.0" y="154.0" />
+      <point x="297.55000000000007" y="154.0" />
+      <point x="0.0" y="72.0" />
+    </edge>
+    <edge source="com.unipi.msc.factory.DesktopFactory" target="com.unipi.msc.model.Desktop" relationship="CREATE">
+      <point x="64.25000000000003" y="-38.5" />
+      <point x="520.3750000000001" y="438.0" />
+      <point x="520.0931407880719" y="438.0" />
+      <point x="-26.406859211928122" y="116.59814014909466" />
+    </edge>
+    <edge source="com.unipi.msc.factory.LaptopFactory" target="com.unipi.msc.model.Laptop" relationship="CREATE">
+      <point x="-81.5" y="-38.5" />
+      <point x="63.12500000000006" y="438.0" />
+      <point x="63.0039684771034" y="438.0" />
+      <point x="26.0039684771034" y="116.59814014909477" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic" zoom="1.0" showDependencies="true" x="396.0" y="440.5" />
+  <SelectedNodes>
+    <node>com.unipi.msc.constants.ComputerSpecs</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Constructors</Category>
+    <Category>Fields</Category>
+    <Category>Inner Classes</Category>
+    <Category>Methods</Category>
+    <Category>Properties</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

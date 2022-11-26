@@ -1,5 +1,6 @@
 package com.unipi.msc.model;
 
+import com.unipi.msc.constants.ComputerSpecs;
 import com.unipi.msc.factory.Computer;
 
 public class Desktop extends Computer {
@@ -29,16 +30,15 @@ public class Desktop extends Computer {
     }
 
     @Override
-    public void useComputer() {
-        System.out.println("User just run a program");
-    }
+    public String useComputer() {return " opens -> " + ComputerSpecs.getRandomProgramBasedOnComputer(getClass().getSimpleName());}
 
     @Override
     public String toString() {
         return "Desktop: " +model+ "("+
                     "screenSize=" + screenSize +
-                    ", model='" + model + '\'' +
+                    ", model='" + model +
                     ", price='" + price +
-                ")";
+                ")\n" +
+                useComputer();
     }
 }

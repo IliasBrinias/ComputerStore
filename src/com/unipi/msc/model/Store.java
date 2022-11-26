@@ -23,10 +23,9 @@ public class Store {
         return instance;
     }
     public void createComputers(int computerCount){
-        int random = r.nextInt(0,computerCount+1);
         for (int i=0; i<computerCount; i++){
             Computer c;
-            if (i<=random){
+            if (r.nextBoolean()){
                 c = ComputerFactory.getComputer(
                         new DesktopFactory(ComputerSpecs.getRandomScreenRatio(r),
                                 ComputerSpecs.getRandomDesktopModel(r),
@@ -43,17 +42,18 @@ public class Store {
         }
         notifyRestCustomers();
     }
-
     private void notifyRestCustomers() {
         for (ComputerListener c:computerListeners) {
             c.outOfStock();
         }
     }
-
+    public void addListener(ComputerListener listener){
+        computerListeners.add(listener);
+    }
     public void createCustomers(int customersCount){
         for (int i=0; i<customersCount; i++){
             Customer c = new Customer("Customer "+i,ComputerSpecs.getRandomCustomerChoice(r));
-            computerListeners.add(c);
+            addListener(c);
         }
     }
     private void computer2Customer(Computer computer){

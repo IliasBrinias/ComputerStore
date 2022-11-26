@@ -18,10 +18,8 @@ public class Main {
     }
 
     private static int getUserInput(String msg){
-
         Scanner mySca = new Scanner(System.in);
         int result;
-
         do {
             System.out.println(msg);
             while (!mySca.hasNextInt()) {
@@ -29,9 +27,7 @@ public class Main {
                 mySca.next();
             }
             result = mySca.nextInt();
-
         }while (result<=2);
-
         return result;
     }
 }

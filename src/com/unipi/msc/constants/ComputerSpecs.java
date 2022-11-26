@@ -44,11 +44,7 @@ public class ComputerSpecs {
         return r.nextInt(5, 80)/10.+" MP";
     }
     public static String getRandomCustomerChoice(Random r){
-        return switch (r.nextInt(0,2)){
-            case 0 -> Laptop.class.getSimpleName();
-            case 1 -> Desktop.class.getSimpleName();
-            default -> "";
-        };
+        return r.nextBoolean() ? Laptop.class.getSimpleName() : Desktop.class.getSimpleName();
     }
     public static String getRandomProgramBasedOnComputer(@NotNull String typeOfComputer){
         Random r = new Random();
